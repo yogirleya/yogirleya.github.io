@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Freedom Wall</title>
+</head>
+<body>
+    <h1>Welcome to Your Freedom Wall</h1>
+    <p>Connect with your Facebook account to start sharing messages and confessions!</p>
+    
+    <div id="messageBox">
+        <!-- Messages and confessions will appear here -->
+    </div>
+    
+    <textarea id="messageInput" placeholder="Write your message or confession here"></textarea>
+    <input type="text" id="senderName" placeholder="Your Name">
+    <button onclick="sendMessage()">Send</button>
+    
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("messageInput").value;
+            var sender = document.getElementById("senderName").value;
+            var newMessage = "<p><strong>" + sender + ":</strong> " + message + "</p>";
+            document.getElementById("messageBox").innerHTML += newMessage;
+        }
+    </script>
+</body>
+</html>
